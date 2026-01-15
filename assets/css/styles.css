@@ -93,6 +93,7 @@ nav {
     display: flex;
     gap: 1.5rem;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .main-nav a {
@@ -266,6 +267,57 @@ footer .container {
 
     .iframe-container iframe {
         width: 100%;
+    }
+}
+
+/* Mobile/tablet: switch to full-width layout */
+@media (max-width: 900px) {
+    body {
+        padding-top: 0;
+    }
+
+    body::before {
+        display: none;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0 16px;
+    }
+
+    header .container {
+        border-radius: 0;
+        padding: 1rem 16px;
+    }
+
+    .main-nav {
+        gap: 1rem;
+        justify-content: flex-end;
+    }
+
+    main .container {
+        padding: 2rem 16px;
+    }
+
+    footer .container {
+        padding: 1rem 16px 1.25rem;
+    }
+}
+
+@media (max-width: 600px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .main-nav {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .page-header h1 {
+        font-size: 2.25rem;
     }
 }
 
