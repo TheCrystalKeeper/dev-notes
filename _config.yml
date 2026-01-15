@@ -1,0 +1,31 @@
+title: "Jaron Erba"
+description: ""
+author:
+  name: "Jaron Erba"
+url: "https://jaronerba.com"
+permalink: "/:year/:month/:title"
+plugins:
+  - "jekyll-feed"
+  - "jekyll-paginate"
+  - "jekyll-redirect-from"
+  - "jekyll-relative-links"
+  - "jekyll-remote-theme"
+  - "jekyll-seo-tag"
+  - "jekyll-sitemap"
+remote_theme: "jekyll/minima"
+minima:
+  social_links:
+    - title: "Follow me on GitHub"
+      icon: "github"
+      url: "https://github.com/TheCrystalKeeper"
+  show_excerpts: "true"
+defaults:
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: "post"
+    scope:
+      path: ""
+    values:
+      author: "Jaron Erba"
