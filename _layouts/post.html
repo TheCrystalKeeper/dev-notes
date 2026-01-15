@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<section class="page-header">
+  <h1>{{ page.title | escape }}</h1>
+  {% if page.month_year %}
+    <p>{{ page.month_year | escape }}</p>
+  {% endif %}
+</section>
+
+<section class="post-body">
+  {{ content }}
+</section>
+
