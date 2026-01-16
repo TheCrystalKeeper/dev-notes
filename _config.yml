@@ -11,11 +11,6 @@ plugins:
   - "jekyll-sitemap"
 
 exclude:
-  - "node_modules"
-  - "package-lock.json"
-  - "package.json"
-  - "server.js"
-  - "public"
   - "README.md"
 
 defaults:

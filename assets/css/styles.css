@@ -135,6 +135,144 @@ main .container {
     padding: 2.5rem 24px;
 }
 
+/* Home page (match modern banner + split layout) */
+.home body::before {
+    display: none;
+}
+
+body.home {
+    padding-top: 0;
+}
+
+body.home header {
+    background-color: var(--primary-color);
+}
+
+body.home header .container {
+    max-width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 1rem 24px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+
+body.home header h1 {
+    grid-column: 2;
+    text-align: center;
+}
+
+body.home header .main-nav {
+    grid-column: 3;
+    justify-content: flex-end;
+}
+
+body.home main .container {
+    max-width: 100%;
+    padding: 0;
+}
+
+.home-hero {
+    height: 260px;
+    background:
+        linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.35)),
+        radial-gradient(circle at 20% 20%, rgba(52,152,219,0.35), rgba(0,0,0,0) 55%),
+        radial-gradient(circle at 70% 60%, rgba(46,204,113,0.20), rgba(0,0,0,0) 60%),
+        linear-gradient(120deg, #22313f, #2c3e50);
+    background-size: cover;
+    background-position: center;
+}
+
+.home-content {
+    padding: 2.25rem 0 3rem;
+}
+
+.home-grid {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.home-profile {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    position: relative;
+    margin-top: -120px;
+}
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #dfe6ee, #f7f9fb);
+    border: 3px solid white;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    margin: -90px auto 1rem;
+}
+
+.profile-name {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 0.25rem;
+}
+
+.profile-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 1.25rem;
+}
+
+.profile-links {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.profile-link {
+    display: block;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: var(--light-bg);
+    color: var(--primary-color);
+    font-weight: 600;
+    border: 1px solid rgba(0,0,0,0.04);
+}
+
+.profile-link:hover {
+    background-color: #eef2f6;
+}
+
+.home-main {
+    padding-top: 0.25rem;
+}
+
+.lead {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 1.25rem;
+}
+
+.home-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+}
+
+.home-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
 .intro {
     text-align: center;
     margin-bottom: 3rem;
@@ -318,6 +456,42 @@ footer .container {
 
     .page-header h1 {
         font-size: 2.25rem;
+    }
+}
+
+@media (max-width: 900px) {
+    body.home header .container {
+        grid-template-columns: 1fr auto;
+        gap: 0.75rem;
+    }
+
+    body.home header h1 {
+        grid-column: 1;
+        text-align: left;
+    }
+
+    body.home header .main-nav {
+        grid-column: 2;
+    }
+
+    .home-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-profile {
+        margin-top: -80px;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-hero {
+        height: 220px;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+        margin-top: -75px;
     }
 }
 
