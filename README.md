@@ -9,6 +9,16 @@ This repo is a **static GitHub Pages site built with Jekyll**.
 - **Branch**: `main`
 - **Folder**: `/ (root)`
 
+## Preview locally (Docker)
+
+From PowerShell in the repo root:
+
+```powershell
+docker run --rm -it -p 4000:4000 -v "${PWD}:/srv/jekyll" -w /srv/jekyll jekyll/jekyll:latest sh -lc "bundle install && bundle exec jekyll serve --watch --force_polling --host 0.0.0.0"
+```
+
+Then open `http://localhost:4000`.
+
 ## Writing posts
 
 Add markdown files here:

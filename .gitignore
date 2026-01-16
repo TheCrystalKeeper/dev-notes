@@ -3,3 +3,7 @@ npm-debug.log
 .DS_Store
 .env
 *.log
+_site/
+.jekyll-cache/
+.sass-cache/
+.bundle/
